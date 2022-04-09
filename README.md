@@ -1,8 +1,10 @@
 AerisWeather Python SDK
 =======================
 
-The AerisWeather Python SDK provides developers with a simple, comprehensive
-solution for programming against AerisWeather's APIs in Python.
+The AerisWeather Python SDK is the official Python interface to
+[AerisWeather][1]'s API offerings. The SDK is focused on simplicity,
+to help you get started quickly, while remaining flexible enough
+to tackle an array of use cases.
 
 Getting Started
 ---------------
@@ -10,21 +12,23 @@ Getting Started
 To make use of the AerisWeather Python SDK, you'll need:
 
 * Python 3.6+. **Python 2 is not supported**.
-* An AerisWeather account. Don't have one? [Sign up here][1]!
-* An internet connection while you are making AerisWeather
+* An [AerisWeather][1] account. Don't have one? [Sign up here][2]!
+* An internet connection while you are making [AerisWeather][1]
   API queries.
+* The `aerisweather` package from PyPI.
 
-Install the `aerisweather` package from PyPI.
+With a little code, you're off to the races!
 
-Then, in your application:
+    import os
+    from aerisweather import AerisWeatherAPIv1Client
 
-    import aerisweather
+    client_id = os.environ["AERIS_CLIENT_ID"]
+    client_secret = os.environ["AERIS_CLIENT_SECRET"]
 
-    # Replace client_id and client_secret by your AerisWeather client ID and secret.
-    # Don't hardcode them!
-    aw = aerisweather.AerisWeatherAPIClient(client_id, client_secret, version="v1")
+    aeris = AerisWeatherAPIv1Client(client_id, client_secret)
+    conditions_ny = aeris.conditions("New York, NY")
 
-    # Get data!
-    dc_conditions = aw.conditions("washington,dc")
+Ready for more? Check out our documentation.
 
-[1]: https://www.aerisweather.com/pricing/
+[1]: https://www.aerisweather.com
+[2]: https://www.aerisweather.com/pricing/
