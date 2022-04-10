@@ -6,6 +6,14 @@ classes, and functions of the AerisWeather Python SDK.
 
 .. module:: aerisweather
 
+Aeris API
+---------
+
+This section describes code used to interact with the Aeris API.
+
+.. autoclass:: aerisweather.api.v1.http.AerisApiHttpClientV1
+   :members:
+
 Utility
 -------
 

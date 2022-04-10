@@ -5,6 +5,8 @@ aerisweather/__version__.py
 Contains the current version of the AerisWeather Python SDK.
 """
 
+from requests import __version__ as _requests_version
+
 _module_name = __name__.split(".")[0]
 
 try:
@@ -18,4 +20,7 @@ except ImportError:
     __version__ = _getdist(_module_name).version
     del _getdist
 
+user_agent = f"AerisWeather Python SDK {__version__} (Requests {_requests_version})"
+
 del _module_name
+del _requests_version
