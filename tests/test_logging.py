@@ -1,6 +1,6 @@
 """
-tests/test_logging.py
----------------------
+tests/test_logging
+------------------
 
 Tests functionality in the aerisweather.logging module.
 """
