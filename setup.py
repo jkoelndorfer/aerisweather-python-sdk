@@ -34,7 +34,7 @@ if __name__ == "__main__":
         author_email="jkoelndorfer@aerisweather.com",
         url=source_url,
         include_package_data=True,
-        package_data={"": ["LICENSE", "README.md"]},
+        package_data={"": ["LICENSE", "py.typed", "README.md"]},
         package_dir={"aerisweather": "aerisweather"},
         python_requires=">=3.6.0",
         install_requires=install_requires,
